@@ -34,12 +34,11 @@ const run = async () => {
         messages: [{ key: faker.string.uuid(), value: encodedMessage }],
       });
 
-      increment++;
       console.log("Order sent:", message);
     } catch (error) {
       console.error("Error sending order:", error);
     }
-  }, 10); // Jeda 3 detik
+  }, 100); // Jeda 3 detik
 };
 
 run().catch(console.error);
